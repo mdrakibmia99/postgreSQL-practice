@@ -2,7 +2,7 @@
  SELECT * from person;
 -- create table 
 CREATE TABLE person(  
-    id int NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    id SERIAL PRIMARY KEY,
     name VARCHAR(255)
 );
 
@@ -17,3 +17,5 @@ VALUES
 ALTER TABLE person 
     ADD COLUMN email VARCHAR(25) DEFAULT 'default@gmail.com ' NOT NULL;
 
+-- inset value  
+INSERT into person VALUES(6,'asdf','asdf@gmail.com');
