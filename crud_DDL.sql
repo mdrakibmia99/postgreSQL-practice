@@ -1,3 +1,4 @@
+-- DDL= data definition language 
 -- get data 
  SELECT * from person;
 -- create table 
@@ -7,11 +8,11 @@ CREATE TABLE person(
 );
 
 -- insert data
-INSERT INTO person ( name)  
+INSERT INTO person ( user_name,age)  
 VALUES  
-    ( 'Rakib'),  
-    ( 'Hasna'),  
-    ( 'Tora');
+    ( 'Rakib',20),  
+    ( 'Hasna',30),  
+    ( 'Tora',40);
 
 -- create a column 
 ALTER TABLE person 
@@ -39,8 +40,17 @@ ALTER TABLE person
 ALTER TABLE person
     ALTER COLUMN user_name TYPE VARCHAR(50);
 
+-- unique type change 
+ALTER TABLE person
+    ADD constraint unique_person_user_age UNIQUE(age)
+-- unique type drop
+ALTER TABLE person
+    drop constraint unique_person_user_age UNIQUE(age)
 
 
 
 -- inset value  
 INSERT into person VALUES(6,'asdf','asdf@gmail.com');
+
+-- truncate data ( যখন টেবিলের ডাটা ডিলেট করবো কিন্তু টেবিলের structure ঠিক থাকবে তখন)
+TRUNCATE table person;
