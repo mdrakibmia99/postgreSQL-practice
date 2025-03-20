@@ -34,7 +34,6 @@ ALTER TABLE person
 ALTER TABLE person
     ALTER COLUMN user_name drop not NULL;
 
-
 -- column type change 
 ALTER TABLE person
     ALTER COLUMN user_name TYPE VARCHAR(50);

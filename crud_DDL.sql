@@ -15,6 +15,7 @@ VALUES
     ( 'Tora',40);
 
 -- create a column 
+
 ALTER TABLE person 
     ADD COLUMN email VARCHAR(25) DEFAULT 'default@gmail.com ' NOT NULL;
 
