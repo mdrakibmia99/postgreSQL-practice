@@ -41,3 +41,14 @@ VALUES
 select * from students ORDER BY first_name DESC;
 select * from students ORDER BY first_name ASC;
 
+-- unique data find like country name etc
+select DISTINCT country from students;
+
+
+-- get data from students table use where clause
+select * from students 
+    where  grade='A' AND course='Physics';
+
+
+select * from students 
+    where  age <> 19;
