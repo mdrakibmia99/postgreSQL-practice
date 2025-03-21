@@ -12,3 +12,10 @@ select to_char(now(), 'dd/MM/yyyy HH:mm:ss')
 
 -- date representation
 select CURRENT_DATE - INTERVAL '1 year 2 month'
+-- use age function get age 
+select age(CURRENT_DATE,'2000-03-09')
+
+select *,age(CURRENT_DATE,dob) from students
+
+-- use extract function get year, month, day etc
+select extract(month from '2000-03-09'::date)
