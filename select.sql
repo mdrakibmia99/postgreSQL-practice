@@ -58,3 +58,36 @@ select * from students
     where  email IS NULL;
 -- COALESCE use for null value initialization using a another value
 select COALESCE(email, 'Not Available') from students;
+--  in use  
+select * from students 
+    where  country not IN ('USA', 'UK', 'Canada');
+select * from students 
+    where  country IN ('USA', 'UK', 'Canada');
+
+-- use between 
+
+    select * from students 
+    where  age BETWEEN 19 AND 22;
+
+-- use like and '%searchText' ILIKE insensitive case
+select * from students 
+    where  first_name LIKE '%am';
+select * from students 
+    where  first_name LIKE '_____h%';
+
+select * from students 
+    where  first_name ILIKE 'a%';
+
+
+-- limit and offset use  first theke koto gula badh dibe ta bujay offset limit koto gula dekhabe
+select * from students 
+    LIMIT 5 OFFSET 5;
+-- delete use
+delete from students 
+    where grade='C';
+
+-- update use
+update students 
+    set email='rk@gmail.com'
+    where student_id=1;
+select * from students ORDER BY student_id DESC;
