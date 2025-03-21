@@ -30,6 +30,9 @@ select * from post
 
 select p.title, u.userName from post p join users u on p.user_id = u.id;
 
+select title,userName from post 
+ join users on post.user_id = users.id;
+
 -- deletion constraint on delete user
 -- restrict deletion => on delete restrict / on delete no action (default)
 -- cascade deletion => on delete cascade ( users table theke jodi kono data delete kora hoy sei id jodi onno table a thake tahole sei table ar row o delete hoye jabe)
